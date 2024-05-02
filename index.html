@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,12 +7,38 @@
     <title>Samuel QP</title>
   </head>
   <body>
+    <div id="top-bar">
+      <button id="toggle-mode">
+       Toggle Theme 
+      </button>
+    </div>
     <div id="person-container">
       <h1 id="full-name">Samuel <br>Quinteiro Perez</h1>
+      <img id="portrait" src="images/placeholder.png" alt="Samuel QP"/>
     </div>
 
-    <div id="resume-container">
-
+    <div id="sidebar-container">
+      <ul>
+        <li><a href="#" class="">○ About Me</a></li>
+        <li><a href="#" class="">○ Resume</a></li>
+        <li><a href="#" class="">○ Projects</a></li>
+      </ul>
     </div>
+
+    <div id="content-container">
+      <div id="resume-container">
+        <object data="images/BaseResume2023.pdf" type="application/pdf" width="100%"
+          height="100%"> 
+          <p>Oops! Your browser doesn't support PDFs!
+            <a href="resume.pdf">click here to download the PDF file.</a>
+          </p>  
+        </object>
+      </div>
+
+      <div id="projects-container">
+
+      </div>
+    </div>
+
   </body>
 </html>
