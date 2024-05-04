@@ -51,6 +51,8 @@ body {
 
 #top-bar {
   display: flex;
+  position: fixed;
+  top: 0;
   width: 100%;
   justify-content: right;
 }
@@ -64,9 +66,10 @@ body {
 
 #person-container {
   display: flex;
-  padding: 15px;
+  width: 50%;
+  margin-top:30px; 
   gap: 25px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -88,6 +91,10 @@ body {
                -13px -13px 27px var(--box-shadow2);
 }
 
+#about-me {
+  width: 50%;
+}
+
 #content-container {
   width: 100%;
   display: flex;
@@ -104,7 +111,7 @@ body {
 #sidebar-container {
   position: fixed;
   right: 0;
-  top: 50%;
+  top: 40%;
   padding-right: 150px;
 }
 
