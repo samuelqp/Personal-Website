@@ -24,6 +24,7 @@ time, mark, audio, video {
 [data-theme="light"] {
   --bg-color: #FBFBFD;
   --fg-color: #1D1D1F;
+  --fg-current-color: #000000;
   --box-shadow1: #cbcbcd;
   --box-shadow2: #ffffff;
 }
@@ -31,6 +32,7 @@ time, mark, audio, video {
 [data-theme="dark"] {
   --bg-color: #1D1D1F;
   --fg-color: #FBFBFD;
+  --fg-current-color: #FBFBFD;
   --box-shadow1: #0c0c0c;
   --box-shadow2: #2e2e32;
 }
@@ -66,7 +68,7 @@ body {
 
 #person-container {
   display: flex;
-  width: 50%;
+  flex: 1;
   margin-top:30px; 
   gap: 25px;
   justify-content: space-between;
@@ -124,9 +126,11 @@ body {
 }
 
 a {
+  color: var(--fg-color);
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--fg-color);
+  font-weight: 500;
+  color: var(--fg-current-color);
 }
