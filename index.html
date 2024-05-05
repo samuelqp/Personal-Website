@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles/style.css">
     <title>Samuel QP</title>
+    <script src="scripts/main.js" defer></script>
   </head>
   <body>
     <div id="top-bar">
-      <button id="toggle-mode">
-       Toggle Theme 
+      <div id="sidebar-container">
+        <a href="#" class="">○ About Me</a>
+        <a href="#" class="">○ Projects</a>
+        <a href="#" class="">○ Resume</a>
+      </div>
+
+      <button id="theme-toggle"
+              type="button"
+              data-theme-toggle
+              aria-label="Toggle dark theme">
+       <img id="theme-toggle-img" src="images/theme-light-dark.svg" alt="Theme Toggle Button"/>
       </button>
     </div>
     <div id="person-container">
@@ -28,13 +38,6 @@
       neque fermentum ultrices
     </p>
 
-    <div id="sidebar-container">
-      <ul>
-        <li><a href="#" class="">○ About Me</a></li>
-        <li><a href="#" class="">○ Projects</a></li>
-        <li><a href="#" class="">○ Resume</a></li>
-      </ul>
-    </div>
 
     <div id="content-container">
       <div id="resume-container">

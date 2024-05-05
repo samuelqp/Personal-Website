@@ -33,6 +33,11 @@ time, mark, audio, video {
   --fg-color: #FBFBFD;
   --box-shadow1: #0c0c0c;
   --box-shadow2: #2e2e32;
+  --fg-filter: invert(86%) sepia(7%) saturate(2997%) hue-rotate(193deg) brightness(122%) contrast(98%);
+}
+
+:root {
+  color-scheme: dark;
 }
 
 body {
@@ -47,34 +52,47 @@ body {
   color: var(--fg-color);
   background-color: var(--bg-color);
   width: 100%;
+  scrollbar-color: dark;
 }
 
 #top-bar {
-  display: flex;
   position: fixed;
   top: 0;
   width: 100%;
-  justify-content: right;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
-#toggle-mode {
-  margin: 10px;
-  padding: 10px 5px;
-  border-radius: 15px;
+#theme-toggle {
   border: 0;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  margin: 10px;
+  padding: 0;
+  width: 8%;
+  max-width: 50px;
+}
+
+#theme-toggle-img {
+  width: 100%;
+  filter: var(--fg-filter);
 }
 
 #person-container {
+  position: relative;
   display: flex;
-  width: 50%;
-  margin-top:30px; 
+  width: 100%;
+  margin-top: 90px;
   gap: 25px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
 #full-name {
-  font-size:calc(12px + 3vw);
+  font-size:calc(20px + 3vw);
   font-weight: 400;
   color: var(--fg-color);
   display: flex;
@@ -83,7 +101,8 @@ body {
 }
 
 #portrait {
-  max-width: 10vw;
+  min-width: 80px;
+  max-width: 8vw;
   height: auto;
   border-radius: 5px;
   background: #1D1D1F;
@@ -92,7 +111,7 @@ body {
 }
 
 #about-me {
-  width: 50%;
+  width: 90%;
 }
 
 #content-container {
@@ -110,9 +129,11 @@ body {
 
 #sidebar-container {
   position: fixed;
-  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  right: 5%;
   top: 40%;
-  padding-right: 150px;
 }
 
 #sidebar-container ul {
@@ -129,4 +150,22 @@ a {
 
 a:visited {
   color: var(--fg-color);
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+/* for desktops */
+@media only screen and (min-width : 701px) {
+  #person-container {
+    width: 50%;
+    justify-content: space-between;
+  }
+}
+
+/* for mobile screens */
+@media only screen and (max-width : 700px) {
+  #sidebar-container {
+    position: relative;
+    flex-direction: row;
+    align-self: left;
+  }
 }
