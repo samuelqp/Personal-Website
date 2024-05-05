@@ -1,3 +1,4 @@
+// THEME TOGGLE
 function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
   if (localStorageTheme !== null) {
     return localStorageTheme;
@@ -41,3 +42,6 @@ button.addEventListener("click", () => {
   // update the currentThemeSetting in memory
   currentThemeSetting = newTheme;
 });
+
+// INTERSECTION OBSERVER FOR DIFFERENT SECTIONS
+
