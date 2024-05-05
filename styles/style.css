@@ -173,6 +173,10 @@ a:visited {
   #resume-container {
     width: 50%;
   }
+  
+  .mobile-viewer {
+    display: none;
+  }
 }
 
 /* for mobile screens */
@@ -181,5 +185,9 @@ a:visited {
     position: relative;
     flex-direction: row;
     align-self: left;
+  }
+
+  .desktop-viewer {
+    display: none;
   }
 }
