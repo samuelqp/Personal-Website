@@ -45,3 +45,34 @@ button.addEventListener("click", () => {
 
 // INTERSECTION OBSERVER FOR DIFFERENT SECTIONS
 
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      switch (entry.target.id) {
+        case "about-me":
+          
+
+        case "projects-container":
+
+        case "resume-container":
+      };
+    };
+  });
+};
+
+
+const observerOptions = {
+  root: null,
+  threshold: 0.5,
+};
+
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+const aboutMeElement = document.getElementById('about-me');
+const projectsElement = document.getElementById('projects-container');
+const resumeElement = document.getElementById('resume-container');
+
+
+observer.observe(aboutMeElement);
+observer.observe(projectsElement);
+observer.observe(resumeElement);

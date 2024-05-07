@@ -55,6 +55,7 @@ body {
   background-color: var(--bg-color);
   width: 100%;
   scrollbar-color: dark;
+  font-size: 20px;
 }
 
 #top-bar {
@@ -158,6 +159,14 @@ a:visited {
   color: var(--fg-color);
 }
 
+/* OFFSET TO AVOID TOP BAR OVERLAPPING */
+:target::before {
+  content: "";
+  display: block;
+  height: 90px; /* fixed header height*/
+  margin: -90px 0 0; /* negative fixed header height */
+}
+
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 /* for desktops */
 @media only screen and (min-width : 701px) {
@@ -177,6 +186,10 @@ a:visited {
   .mobile-viewer {
     display: none;
   }
+
+  #sidebar-container {
+    font-size: 20px;
+  }
 }
 
 /* for mobile screens */
@@ -185,6 +198,8 @@ a:visited {
     position: relative;
     flex-direction: row;
     align-self: left;
+    width: 90%;
+    font-size: 15px;
   }
 
   .desktop-viewer {
