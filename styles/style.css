@@ -100,9 +100,11 @@ body {
   font-size:calc(20px + 3vw);
   font-weight: 400;
   color: var(--fg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+#full-name b{
+  font-weight: 300;
+  font-size:calc(10px + 1.5vw);
 }
 
 #portrait {
@@ -121,6 +123,7 @@ body {
 
 #content-container {
   width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,7 +132,7 @@ body {
 
 #resume-container {
   width: 90%;
-  height: 1025px;
+  height: 67vw;
 }
 
 #sidebar-container {
@@ -188,7 +191,7 @@ a:visited {
   }
 
   #sidebar-container {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 

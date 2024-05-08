@@ -44,17 +44,29 @@ button.addEventListener("click", () => {
 });
 
 // INTERSECTION OBSERVER FOR DIFFERENT SECTIONS
+const aboutMeLink = document.getElementById('about-me-link');
+const projectsLink = document.getElementById('projects-link');
+const resumeLink = document.getElementById('resume-link');
 
 function handleIntersection(entries, observer) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       switch (entry.target.id) {
         case "about-me":
-          
-
+          aboutMeLink.innerText = "- About Me -";
+          projectsLink.innerText = "   Projects";
+          resumeLink.innerText = "   Resume";
+          break;
         case "projects-container":
-
+          aboutMeLink.innerText = "   About Me";
+          projectsLink.innerText = "- Projects -";
+          resumeLink.innerText = "   Resume";
+          break;
         case "resume-container":
+          aboutMeLink.innerText = "   About Me";
+          projectsLink.innerText = "   Projects";
+          resumeLink.innerText = "- Resume -";
+          break;
       };
     };
   });
