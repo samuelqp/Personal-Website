@@ -27,6 +27,8 @@ time, mark, audio, video {
   --fg-current-color: #000000;
   --box-shadow1: #cbcbcd;
   --box-shadow2: #ffffff;
+
+  --bg-card: #e6e6e6;
 }
 
 [data-theme="dark"] {
@@ -36,6 +38,8 @@ time, mark, audio, video {
   --box-shadow1: #0c0c0c;
   --box-shadow2: #2e2e32;
   --fg-filter: invert(86%) sepia(7%) saturate(2997%) hue-rotate(193deg) brightness(122%) contrast(98%);
+
+  --bg-card: #313135;
 }
 
 :root {
@@ -162,14 +166,6 @@ a:visited {
   color: var(--fg-color);
 }
 
-/* OFFSET TO AVOID TOP BAR OVERLAPPING */
-:target::before {
-  content: "";
-  display: block;
-  height: 90px; /* fixed header height*/
-  margin: -90px 0 0; /* negative fixed header height */
-}
-
 #projects-container {
   display: flex;
   flex-direction: column;
@@ -184,9 +180,9 @@ a:visited {
 }
 
 #projects-grid {
-  width: 70vw;
+  width: 50vw;
   display: grid;
-  grid-auto-rows: 200px;
+  grid-auto-rows: minmax(1fr, 300px);
   grid-template-columns: 1fr;
   gap: 30px;
   overflow: hidden;
@@ -201,14 +197,34 @@ a:visited {
   justify-content: center;
   align-items: center;
   border: none;
+  padding: 15px;
+
+  background-color: var(--bg-card);
 }
 
-.project-card img {
-  flex: 3;
-  height: 60%;
+.card-image {
+  flex: 2;
+  padding: 10px;
+  max-height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .project-card p {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 20px;
   flex: 1;
 }
 
@@ -259,4 +275,12 @@ a:visited {
   .desktop-viewer {
     display: none;
   }
+}
+
+/* OFFSET TO AVOID TOP BAR OVERLAPPING */
+:target::before {
+  content: "";
+  display: block;
+  height: 150px; /* fixed header height*/
+  margin: -150px 0 0; /* negative fixed header height */
 }
