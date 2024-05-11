@@ -119,8 +119,7 @@ body {
   height: auto;
   border-radius: 5px;
   background: #1D1D1F;
-  box-shadow:  13px 13px 27px var(--box-shadow1),
-               -13px -13px 27px var(--box-shadow2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 #about-me {
@@ -158,13 +157,30 @@ body {
   font-size: 20px;
 }
 
-a {
+#about-me a {
+  color: rgb(0, 102, 204);
+  text-decoration: none;
+}
+
+#about-me a:hover {
+  color: rgb(0, 102, 204);
+  text-decoration: underline;
+}
+
+#about-me a:visited {color: rgb(0, 102, 204);}
+
+#about-me a:active, 
+#about-me a:visited:active {
+  color: rgb(0, 102, 204);
+}
+
+.sidelink {
   color: var(--fg-color);
   text-decoration: none;
   white-space: pre;
 }
 
-a:visited {
+.sidelink:visited {
   color: var(--fg-color);
 }
 
@@ -233,7 +249,7 @@ a:visited {
   justify-content: center;
   align-items: end;
   font-size: 20px;
-  flex: 1;
+  margin-top: 10px;
 }
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
