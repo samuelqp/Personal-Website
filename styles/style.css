@@ -29,6 +29,7 @@ time, mark, audio, video {
   --box-shadow2: #ffffff;
 
   --bg-card: #e6e6e6;
+  --bg-card-hover: #bfbfbf;
 }
 
 [data-theme="dark"] {
@@ -40,6 +41,7 @@ time, mark, audio, video {
   --fg-filter: invert(86%) sepia(7%) saturate(2997%) hue-rotate(193deg) brightness(122%) contrast(98%);
 
   --bg-card: #313135;
+  --bg-card-hover: #62626a;
 }
 
 :root {
@@ -198,8 +200,14 @@ a:visited {
   align-items: center;
   border: none;
   padding: 15px;
+  z-index: 100;
 
   background-color: var(--bg-card);
+}
+
+.project-card:hover{
+  background-color: var(--bg-card-hover);
+  cursor: pointer;
 }
 
 .card-image {
@@ -275,6 +283,10 @@ a:visited {
   .desktop-viewer {
     display: none;
   }
+
+  #resume-container {
+    height: 115vw;
+  }
 }
 
 /* OFFSET TO AVOID TOP BAR OVERLAPPING */
@@ -283,4 +295,5 @@ a:visited {
   display: block;
   height: 150px; /* fixed header height*/
   margin: -150px 0 0; /* negative fixed header height */
+  z-index: -100;
 }
