@@ -79,12 +79,16 @@ body {
 
 #theme-toggle {
   border: 0;
-  background-color: var(--bg-color);
+  background-color: var(--bg-card);
+  border-radius: 50%;
   color: var(--fg-color);
   margin: 10px;
   padding: 0;
-  width: 8%;
-  max-width: 50px;
+  width: 8vw;
+  height: 8vw;
+  padding: 10px;
+  max-width: 60px;
+  max-height: 60px;
 }
 
 #theme-toggle-img {
@@ -302,6 +306,11 @@ body {
 
   #resume-container {
     height: 115vw;
+  }
+
+  #theme-toggle {
+    padding: 5px;
+    margin: 5px;
   }
 }
 
