@@ -128,6 +128,9 @@ body {
 
 #about-me {
   width: 90%;
+  vertical-align: center;
+  padding-left: 10px;
+  border-left: 2px solid var(--fg-color);
 }
 
 #content-container {
@@ -197,8 +200,13 @@ body {
   width: 90%;
 }
 
-#projects-header {
+#projects-header, #resume-header {
   font-size: 25px;
+  font-weight: bold;
+}
+
+#resume-header {
+  margin-bottom: 15px;
 }
 
 #projects-grid {
