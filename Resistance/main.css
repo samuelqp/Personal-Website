@@ -187,7 +187,6 @@ header {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    padding: 25px;
 }
 
 @media only screen and (max-width: 768px) {
