@@ -153,6 +153,13 @@ header {
         margin-right: 0px;
     }
     
+    #bigHeader {
+       display: none;
+    }
+    
+    #smallHeader {
+      visibility: visible !important;
+    }
 }
 
 .headerIcon {
